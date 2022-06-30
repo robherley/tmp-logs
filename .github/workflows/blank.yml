@@ -1,0 +1,14 @@
+name: logs
+
+on:
+  workflow_dispatch:
+jobs:
+  log:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          for value in {1..50}
+          do
+            echo "Print this --> $value"
+            sleep 1
+          done
